@@ -162,7 +162,7 @@ Fixer la base de la jauge perpendiculairement à l'axe des 0º et la fin de la z
 Déplacer l'autre extremité par des pas de 10º en balayant de 90º jusqu'à -90º par rapport à l'axe neutre de la base.
 
 _Image du banc de test_
-![alt text]( "banc de test")
+![alt text](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/BancTest.png "banc de test")
 
 ## Pistes de réflexion
 
