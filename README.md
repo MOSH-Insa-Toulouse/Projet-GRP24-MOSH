@@ -27,9 +27,8 @@ Ce Git contient les ressources nécessaire pour le projet 2021 qui s'inscrit dan
 
 - Shield PCB
 - Code Arduino permettant la mesure de la resistance R et la tension, ainsi que le contrôle des fonctionnalités BT, OLED et capteur rotatoire
-- Application android APK réalisé avec MIT APP INVENTOR
-- Protocole de mesure et le programme Arduino pour le banc de test
-- Datasheet du capteur de déformation/ jauge de contrainte
+- Application android APK réalisée avec MIT APP INVENTOR
+- Datasheet du capteur de déformation
 
 ## Description
 
@@ -66,8 +65,8 @@ Ce projet a pour but le développement d'un **capteur de déformation mécanique
 ### Bibliotèques
 
 - Installer la bibliothèque ["Adafruit GFX Library"](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Libraries%20ajout%C3%A9es/Adafruit-GFX-Library-master.zip)
-- Installer la bibliothèque ["Adafruit SSD1306"](XXX)
-- Installer la bibliothèque ["Adafruit BusIOa"](XXX)
+- Installer la bibliothèque ["Adafruit SSD1306"](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Libraries%20ajout%C3%A9es/Adafruit_SSD1306-master.zip)
+- Installer la bibliothèque ["Adafruit BusIOa"](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Libraries%20ajout%C3%A9es/Adafruit_BusIO-master.zip)
 
 ### Notre code arduino
 
@@ -80,97 +79,10 @@ Notre code Arduino permet de:
 - Gère l'encodeur rotatoire
 
 [_Pour télécharger le code_](XXX)
+[_Pour télécharger la version pour les mesures(sans encodeur rotatoire)_](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/code/code_banc_test.ino)
 
 ```C++
-//connexion BT
-#include <SoftwareSerial.h>
-#define rxPin 10 //cable jaune sur Tx
-#define txPin 11 //cable vert sur Rx
-#define baudrate 9600
-SoftwareSerial mySerial(rxPin,txPin);
 
-volatile byte RX = 0;
-byte serialRX;
-byte serialTX;
-int action=0;
-
-//OLED (initialisation)
-#include <Adafruit_BusIO_Register.h>
-#include <Adafruit_I2CDevice.h>
-#include <Adafruit_I2CRegister.h>
-#include <Adafruit_SPIDevice.h>
-
-#include <Adafruit_SSD1306.h>
-#include <Adafruit_GFX.h>
-#include <SPI.h>
-#include <Wire.h>
-
-#define oled Adafruit_SSD1306
-#define SCREEN_WIDTH 128 // OLED display width, in pixels
-#define SCREEN_HEIGHT 32 // OLED display height, in pixels
-#define OLED_RESET     4 // Reset pin # (or -1 if sharing Arduino reset pin)
-
-#define SCREEN_ADDRESS 0x3C ///< See datasheet for Address; 0x3C for 128x32
-oled display(-1);
-
-
-//gestion des valeurs de tension
-#define A0 0
-int valeur=0;
-int R1=100000;
-int R3=100000;
-int R2=1000;
-int R5=10000;
-int Vcc=5;
-
-//fonction qui test l'affichage correct de l'Oled
-void setup() {
-  Serial.begin(9600);
-  display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS);
-
-  pinMode(rxPin,INPUT);
-  pinMode(txPin,OUTPUT);
-  mySerial.begin(9600);
-
- display.clearDisplay();
- display.setTextSize(1);
- display.setTextColor(WHITE);
- display.setCursor(25,15);
- display.println("Projet capteur");
- display.display();
- delay(100);
-}
-
-//lecture de la valeur mesurée
-float lectureValeur () {
-  valeur=analogRead(A0);
-  return valeur;
-  }
-
-void affichage_tension (float valeur) {
- display.clearDisplay();
- display.setTextSize(1);
- display.setTextColor(WHITE);
- display.setCursor(30,8);
- display.print("valeur res =");
- display.setCursor(30,18);
- float val_res=(1+(R3/R2))*R1*(Vcc/((5*valeur)/1024))-R1-R5; // calcul de la valeur de résistance
- display.print(val_res);
- display.println(" Ohm");
- display.display();
- }
-
-void loop() {
-  //while (mySerial.available()) {
-      float val=lectureValeur();
-    //byte val = map(lectureValeur(), 0, 1024, 0, 255); // conversion 1024/255
-      mySerial.write(val);
-      Serial.println(val);
-      mySerial.print(",");
-      affichage_tension(val*4);
-      
-    delay(25);
-}
  ```
 
 ## Projet KICAD
@@ -179,34 +91,45 @@ void loop() {
 Le projet sur le logiciel KICAD permet de:
 
 - Manipuler le PCB sous forme de Shield pour carte Arduino UNO
-- Interface du capteur graphite via un circuit transimpédance
-- Interface pour un module Bluetooth
-- Interface pour un écran oled
-- Interface pour un encodeur rotatoire
+- Interfacer capteur graphite via un circuit transimpédance
+- Interfacer un module Bluetooth
+- Interfacer un écran oled
+- Interfacer un encodeur rotatoire
 
-Projet KICAD avec fichiers formats pdf et format GERBER à télécharger [_ici_](XXX)
+Projet KICAD avec fichiers formats pdf et format GERBER à télécharger [_ici_](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/tree/main/kicad)
 
 _Aperçu du fichier LT SPICE_
 
-![alt text] (XXX "Screenshot du fichier LT SPICE pour la conception et la simulation du circuit électrique sur le PCB")
+![alt text] (https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/LTSPICE.png "Screenshot du fichier LT SPICE pour la conception et la simulation du circuit électrique sur le PCB")
 
 _Aperçu du Shield PCB (empreinte GERBER)_
 
-![PCB pdf](XXX "Aperçu du shield PCB en pdf")
+![PCB pdf](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/kicad/kicad-B_Cu.pdf "Aperçu du shield PCB en pdf")
+
+### Représentation électrique des composants principaux
+
+![alt text](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/Amplificateur.png "Amplificateur")
+
+![alt text](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/Modules.png "Modules")
 
 ### Placement des composants
 
-![alt text](XXX "Placement des composants")
+![alt text](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/Placement.png "Placement des composants")
 
 ### Sockets KICAD pour les différents composants
 
 - Amplificateur transimpédance
 
-![alt text](XXX "Amplificateur transimpédance")
+![alt text](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/Amplificateur%20transimpedance.png "Amplificateur transimpédance")
 
-- Modules Blueetooth/OLED/Encodeur
+- Module Blueetooth
 
-![alt text](XXX "modules")
+![alt text](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/Module%20BT.png "modules")
+
+- Encodeur rotatoire
+
+![alt text](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/Encodeur%20rotatoire.png "modules")
+
 
 ## Application Android apk
 
@@ -223,12 +146,9 @@ Le site internet de création d'application [_MIT App Inventor_](https://appinve
 
 ### Notre application
 
-Notre code de l'application (format .aia) est à télécharger [_ici_]()
+Notre code de l'application (format .aia) est à télécharger [_ici_](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/APK/Capteur_graph.aia)
 
-Notre code de l'application (format .apk) est à télécharger [_ici_]()
-
-_Apperçu de l'application_
-![alt text](XXX "apperçu de l'application")
+Notre code de l'application (format .apk) est à télécharger [_ici_](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/APK/Capteur_graph.apk)
 
 ## Banc de test
 
