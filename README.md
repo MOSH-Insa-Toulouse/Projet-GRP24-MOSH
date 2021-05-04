@@ -33,7 +33,12 @@ Ce Git contient les ressources nécessaire pour le projet 2021 qui s'inscrit dan
 ## Description
 
 ---
-Ce projet a pour but le développement d'un **capteur de déformation mécanique** à base de matériaux peut onéreux ainsi que écoresponsable. Le principe physique qui fait notre projet possible le transport des électrons entre les nanoparticules de graphite, qui lui même, est régi par l'effet tunnel. Ce capteur exploite le lien entre la conduction électrique des électrons et l'espace moyen entre les particules d'un réseau granuleux. En effet, l'éloignement et le rapprochement du réseau induit par un stress mécanique fait varier la **conductivité électrique** de la piste de graphite, puisque la distance inter-particule a été affectée. La déformation de cette dernière induit une variation de résistance électrique réversible et exploitable pour créer une jauge de contrainte. Le **conditionneur** de notre projet est un shield comportant un circuit électrique d'amplificateur transimpédance, ainsi que des interface pour un module bluetooth, un capteur rotatoire, une écran OLED et bien sur, l'entrée analogique de la jauge de contrainte. Ce shield a été déssiné sur **KICAD** et des simulations du circuit transimpédance ont été faits sur **LT SPICE**. Le code principala été réalisé en C++ sur l'**IDE Arduino UNO**. Finalement une application android a été développé sur **MIT App Inventor** pour communiquer et recevoir des données à distance, via bluetooth. Un banc de test a été réalisé avec un rapporteur et les pistes de graphites dessinées sur des feuilles de papier. Un protocole de mesure sera spécifié pour exposer commment nous avons exploité et étudié la réponse de déformation de différents capteurs.
+Dans le cadre de l'UF MOSH, nous avons conçu un capteur résistif composé de matériaux peu chers, en effet, un simple papier et un crayon nous permettent de créer ce capteur.
+Ici, le phénomène physique est l'effet tunnel, en effet, il existe un lien entre la conduction des électrons et la distance interatopique du réseau percolet.
+En faisant varier la distance séparant les particules du réeau (en pliant une feuille de papier sur laquelle on aura déposé du graphite par exemple), la conductivité du graphite varie, la résistivité varier également, et donc, la résistance variera aussi en fonction des dimensions du capteur, c'est cette propriété que l'on va exmploiter avec de créer notre capteur résistif. Nous avons également implémenté  un shield sur notre chaine de mesures, ce dernier a été conçu a l'aide du logiciel KICAD et aura un rôle de conditionneur du signal; le shield est composé d'un module Bluetooth, un écran OLED, un encodeur rotatoire,  un amplificateur transimpédance ainsi qu'une entrée analogique pour le capteur résistif; pour finir, nous avons effectué l'ensemble des tests du circuit sur le logiciel LTSpice.
+
+Nous avons ensuite imprimé notre circuit PCB après validation de l'équipe pedagogique, on a utilisé une carte Arduino pour la lecture des mesures et la création des fonctions relatives à l'écran OLED, au module Bluetooth ainsi qu'a l'encodeur rotatoire même si on n'a pas fini de coder cette partie; avec le site MIT App Inventor, nous avons développé une application Android qui a pour but d'envoyer et de recevoir des donnérs via Bluetooth.
+Pour tester notre capteur, nous avons utilisé différents types de crayons (B, HB, 2H), nous avons utilité le banc de test mis a disposition en salle d'instrumentation comportant 7 bosses de rayon de courbure différent, les mesures ont été lues directement sur l'écran OLED.
 
 ### Code Arduino
 
@@ -46,10 +51,10 @@ Ce projet a pour but le développement d'un **capteur de déformation mécanique
 ### KICAD
 
 - PCB sous forme de Shield pour carte Arduino UNO
-- Interface du capteur graphite via un circuit transimpédance
-- Interface pour un module Bluetooth
-- Interface pour un écran oled
-- Interface pour un encodeur rotatoire
+- Interface du capteur résistif en graphite
+- Modèle pour un module Bluetooth
+- Modèle pour un écran oled
+- Modèle pour un encodeur rotatoire
 
 ### Application apk
 
