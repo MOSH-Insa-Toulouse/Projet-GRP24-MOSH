@@ -42,29 +42,20 @@ Pour tester notre capteur, nous avons utilisé différents types de crayons (B, 
 
 ### Code Arduino
 
-- Mesure la tension de sortie du circuit transimpédance
-- Calcule la résistance du capteur de graphite connaissant la fonction de transfert du conditionneur
-- Envoie la mesure de la tension et de la resistance via Bluetooth sur 1 octet
-- Affiche les mesures de tension, de résistance et possède un menu pour choisir entre un offset et un gain numérique sur un écran OLED
-- Gère l'encodeur rotatoire
+Le code Arduino permet d'afficher les valeurs de tension dans la console ainsi que les valeurs de résistance, nous avons implémenté dans le code arduino le calcul de résistance qui été déjà présent dans l'APK android, le code nous fourni également la valeur de tension lue en sortie du circuit transimpédance, il écrit également la valeur de résistance sur l'écran OLED
 
 ### KICAD
 
-- PCB sous forme de Shield pour carte Arduino UNO
-- Interface du capteur résistif en graphite
-- Modèle pour un module Bluetooth
-- Modèle pour un écran oled
-- Modèle pour un encodeur rotatoire
+Sur le logiciel KICAD on a créé les modèles pour l'écran OLED, le module Bluetooth ainsi que l'encodeur rotatoire, il y a également une interface de notre capteur résistif en graphite.
+
 
 ### Application apk
 
-- Récupère la mesure de tension
-- Calcule et affiche la valeur de la résistance du capteur de graphite connaissant la fonction de transfert du conditionneur (en MΩ)
-- Trace un graphique qui décrit l'évolution de la mesure de tension au cours du temps
-- Mise à l'échelle automatique de l'ordonnée du graphique
+L'application android permet de lire la valeur de tension, elle calcule également la résistance du capteur en connaissance toutes les valeurs des résistances du circuit transimpédance, elle dessine une courbe représentant la variation de tension sur toute la durée d'utilisation du capteur.
 
 ## Arduino
 
+En résumé, notre code Arduino permet la mesure d'une tension en sortie du circuit transimpédance, d'envoyer la mesure de cette tension par Bluetooth, le code permet le calcul de la résistancede notre capteur résistif, il envoie également cette valeur par Bluetooth, il affiche la valeur de tension dans la console ainsi que la valeur de résistance sur l'écran OLED, n'ayant pas fini le code de l'encodeur rotatoire, toutes les mesures ont été réalisées sans celui-ci.
 ---
 
 ### Bibliotèques
