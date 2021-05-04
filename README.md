@@ -288,6 +288,7 @@ Notre code de l'application (format .apk) est à télécharger [_ici_](https://g
 Afin de tracer les courbes caractéristiques, on a mesuré la résistance du papier a l’aide d’un objet avec 7 « ponts » de différents rayons de courbure, on a déposé le capteur en papier dessus en faisant attention à reproduire à chaque mesure la même expérience et en déposant le papier au même endroit.. Les résultats sont dans notre [_datasheet_](XXX)
 
 _Image du banc de test_
+
 ![alt text](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/BancTest.png "banc de test")
 
 ## Pistes de réflexion
