@@ -100,7 +100,7 @@ Projet KICAD avec fichiers formats pdf et format GERBER à télécharger [_ici_]
 
 ### Image du fichier LT SPICE
 
-![alt text] (https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/LTSPICE.png "Screenshot du fichier LT SPICE pour la conception et la simulation du circuit électrique sur le PCB")
+![alt text](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/LTSPICE.png "Screenshot du fichier LT SPICE pour la conception et la simulation du circuit électrique sur le PCB")
 
 _Aperçu du Shield PCB (empreinte GERBER)_
 
