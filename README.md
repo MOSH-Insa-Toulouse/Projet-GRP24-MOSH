@@ -54,9 +54,8 @@ Sur le logiciel KICAD on a créé les modèles pour l'écran OLED, le module Blu
 L'application android permet de lire la valeur de tension, elle calcule également la résistance du capteur en connaissance toutes les valeurs des résistances du circuit transimpédance, elle dessine une courbe représentant la variation de tension sur toute la durée d'utilisation du capteur.
 
 ## Arduino
-
-En résumé, notre code Arduino permet la mesure d'une tension en sortie du circuit transimpédance, d'envoyer la mesure de cette tension par Bluetooth, le code permet le calcul de la résistancede notre capteur résistif, il envoie également cette valeur par Bluetooth, il affiche la valeur de tension dans la console ainsi que la valeur de résistance sur l'écran OLED, n'ayant pas fini le code de l'encodeur rotatoire, toutes les mesures ont été réalisées sans celui-ci.
 ---
+En résumé, notre code Arduino permet la mesure d'une tension en sortie du circuit transimpédance, d'envoyer la mesure de cette tension par Bluetooth, le code permet le calcul de la résistancede notre capteur résistif, il envoie également cette valeur par Bluetooth, il affiche la valeur de tension dans la console ainsi que la valeur de résistance sur l'écran OLED, n'ayant pas fini le code de l'encodeur rotatoire, toutes les mesures ont été réalisées sans celui-ci.
 
 ### Bibliotèques
 
