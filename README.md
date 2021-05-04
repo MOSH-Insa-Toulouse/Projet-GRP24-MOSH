@@ -123,8 +123,6 @@ volatile boolean TurnDetected;
 volatile boolean up;
 static long virtualPosition=0; //Position Gain    
  
-
-
 //gestion des valeurs de tension
 #define A0 0
 int valeur=0;
@@ -142,9 +140,6 @@ void ISR ()  {                    //Interrupt Service Routine
    up = !digitalRead(PinDT);
  TurnDetected = true;
 }
-
-
-
 
 void setup() {
   Serial.begin(9600);
@@ -168,7 +163,6 @@ void setup() {
  pinMode(PinSW,INPUT);
  attachInterrupt (0,ISR,RISING); 
 }
-
 
 //lecture de la valeur sur l'arduino
 float lectureValeur () {
