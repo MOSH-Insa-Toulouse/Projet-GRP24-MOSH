@@ -98,15 +98,13 @@ Le projet sur le logiciel KICAD permet de:
 - Interface pour un écran oled
 - Interface pour un encodeur rotatoire
 
-_PCB avec les composants à souder_
-
-![PCB](XXX)
-
 Projet KICAD avec fichiers formats pdf et format GERBER à télécharger [_ici_](XXX)
 
-Fichiers créés pour la conception et la simulation du circuit électrique sur le PCB LT SPICE à télécharger [_ici_](XXX)
+_Aperçu du fichier LT SPICE_
 
-_Apperçu du Shield PCB (empreinte GERBER)_
+![alt text] (XXX "Screenshot du fichier LT SPICE pour la conception et la simulation du circuit électrique sur le PCB")
+
+_Aperçu du Shield PCB (empreinte GERBER)_
 
 ![PCB pdf](XXX "Aperçu du shield PCB en pdf")
 
@@ -120,23 +118,18 @@ _Apperçu du Shield PCB (empreinte GERBER)_
 
 ![alt text](XXX "Amplificateur transimpédance")
 
-- Module Blueetooth
+- Modules Blueetooth/OLED/Encodeur
 
-![alt text](XXX "module bluetooth")
-
-- Encodeur rotatoire
-
-![alt text](XXX "encodeur rotatoire")
+![alt text](XXX "modules")
 
 ## Application Android apk
 
 ---
-L'application android faite sur MIT App Inventor sert à:
+L'application android développée sur MIT App Inventor sert à:
 
-- Récupère la mesure de tension
+- Récupérer la mesure de tension
 - Calcule et affiche la valeur de la résistance du capteur de graphite connaissant la fonction de transfert du conditionneur (en MΩ)
 - Trace un graphique qui décrit l'évolution de la mesure de tension au cours du temps
-- Mise à l'échelle automatique de l'ordonnée du graphique
 
 ### MIT App inventor
 
@@ -154,7 +147,7 @@ _Apperçu de l'application_
 ## Banc de test
 
 ---
-Nous avons réalisé un banc de test très "low cost" avec lequel nous avons fait toutes les mesures pour la caractérisation des différents capteurs. Les résultats sont dans notre [_datasheet_](https://github.com/MOSH-Insa-Toulouse/SANCHEZ_VIDAL_Projet_Capteur/blob/main/Datasheet.docx)
+Nous avons réalisé un banc de test très "low cost" avec lequel nous avons fait toutes les mesures pour la caractérisation des différents capteurs. Les résultats sont dans notre [_datasheet_](XXX)
 
 Protocole du banc de test/ utilisation optimale et conseillée du capteur (90º/-90º):
 Fixer les deux extrémités de la jauge en papier a des surfaces rigides et de longueur suffisante pour permettre de lire les angles sur les notations du support (rapporteur dans ce cas).
