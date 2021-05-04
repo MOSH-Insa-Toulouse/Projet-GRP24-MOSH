@@ -65,7 +65,7 @@ Ce projet a pour but le développement d'un **capteur de déformation mécanique
 
 ### Bibliotèques
 
-- Installer la bibliothèque ["Adafruit GFX Library"](XXX)
+- Installer la bibliothèque ["Adafruit GFX Library"](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Libraries%20ajout%C3%A9es/Adafruit-GFX-Library-master.zip)
 - Installer la bibliothèque ["Adafruit SSD1306"](XXX)
 - Installer la bibliothèque ["Adafruit BusIOa"](XXX)
 
