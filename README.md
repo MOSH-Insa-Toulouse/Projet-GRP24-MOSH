@@ -153,13 +153,7 @@ Notre code de l'application (format .apk) est à télécharger [_ici_](https://g
 ## Banc de test
 
 ---
-Nous avons réalisé un banc de test très "low cost" avec lequel nous avons fait toutes les mesures pour la caractérisation des différents capteurs. Les résultats sont dans notre [_datasheet_](XXX)
-
-Protocole du banc de test/ utilisation optimale et conseillée du capteur (90º/-90º):
-Fixer les deux extrémités de la jauge en papier a des surfaces rigides et de longueur suffisante pour permettre de lire les angles sur les notations du support (rapporteur dans ce cas).
-Pour ce faire nous devons conserver un carré d'environ 1cm de côté comme prolongation de la jauge. Sur ce carré il n'y a pas de piste en graphite.
-Fixer la base de la jauge perpendiculairement à l'axe des 0º et la fin de la zone d'accroche des pinces en cuivre à 5mm du centre du rapporteur.
-Déplacer l'autre extremité par des pas de 10º en balayant de 90º jusqu'à -90º par rapport à l'axe neutre de la base.
+Afin de tracer les courbes caractéristiques, on a mesuré la résistance du papier a l’aide d’un objet avec 7 « ponts » de différents rayons de courbure, on a déposé le capteur en papier dessus en faisant attention à reproduire à chaque mesure la même expérience et en déposant le papier au même endroit.. Les résultats sont dans notre [_datasheet_](XXX)
 
 _Image du banc de test_
 ![alt text](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/BancTest.png "banc de test")
@@ -168,9 +162,9 @@ _Image du banc de test_
 
 ---
 
-- Améliorer le banc de test parcequ'il est susceptibles à  induire plusieurs erreurs aléatoires lors des mesures.
+- Changer le banc de test car les mesures étaient souvent pas très précises et cela nous a demandé de faire plusieurs capteurs différents afin d'obtenir des résultats satisfaisants.
 
-- Implementer la gestion de l'encodeur rotatoire pour le calcule de l'offset et le gain numérique, ains qu'un deboucing (soit analogique ou numérique)
+- Finaliser le code de l'encodeur rotatoire(les résultats de mesure sont fait sans la partie encodeur rotatoire)
 
 - Tester et caractériser plus de capteurs (plus de pistes en graphites avec des différents types de crayons à papier)
 
@@ -179,8 +173,8 @@ _Image du banc de test_
 ---
 Valentin MORIN / Fayçal HOUSSAINI / François THULLIER
 
-- 
-- 
--
+- morin.vltn@gmail.com
+- houssain@etud.insa-toulouse.fr
+- francois.thullier98@gmail.com 
 
 Étudiants à l'INSA de Toulouse en 4ème année Génie Physique
