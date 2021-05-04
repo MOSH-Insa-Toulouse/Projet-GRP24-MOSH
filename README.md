@@ -1,6 +1,6 @@
-							#####################
-							# Projet-GRP24-MOSH #
-							#####################
+						#####################
+						# Projet-GRP24-MOSH #
+						#####################
 
 Avant d'entamer le projet, nous avons commencé par effectuer une série d'exercices sur la conception de code Arduino 
 (par exemple comment gérer un écran OLED). Cela nous a été  très utile pour comprendre les bases d'Arduino 
