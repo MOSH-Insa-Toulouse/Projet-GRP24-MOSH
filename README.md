@@ -98,7 +98,7 @@ Le projet sur le logiciel KICAD permet de:
 
 Projet KICAD avec fichiers formats pdf et format GERBER à télécharger [_ici_](https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/tree/main/kicad)
 
-_Aperçu du fichier LT SPICE_
+### Image du fichier LT SPICE
 
 ![alt text] (https://github.com/MOSH-Insa-Toulouse/Projet-GRP24-MOSH/blob/main/Images/LTSPICE.png "Screenshot du fichier LT SPICE pour la conception et la simulation du circuit électrique sur le PCB")
 
